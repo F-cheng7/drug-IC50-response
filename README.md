@@ -47,7 +47,37 @@ single_fewshot_filled_rounded.csv
 
 If you use a different local path, please modify the corresponding dataset path in the training commands.
 
-## 4. Training Examples
+## 4. Pretrained BERT
+
+This project uses `bert-base-uncased` as the drug text encoder.
+
+You can download the pretrained BERT model from Hugging Face:
+
+```text
+https://huggingface.co/bert-base-uncased
+```
+
+Please place the downloaded BERT model under:
+
+```text
+pretrained/bert-base-uncased/
+```
+
+The expected structure is:
+
+```text
+pretrained/
+└── bert-base-uncased/
+    ├── config.json
+    ├── pytorch_model.bin
+    ├── tokenizer.json
+    ├── tokenizer_config.json
+    └── vocab.txt
+```
+
+If you place the BERT model in another directory, please modify the `--text_model_name` argument accordingly.
+
+## 5. Training Examples
 
 Only core command examples are provided here.  
 For complete hyperparameter settings, please refer to `commands.md`.
@@ -131,7 +161,7 @@ python code/main.py \
   --few_shot_support_ratio 0.25196850393700787
 ```
 
-## 5. Outputs
+## 6. Outputs
 
 Training outputs are saved to the directory specified by `--ckpt_dir`.
 
