@@ -148,7 +148,7 @@ Example command for 32-shot adaptation:
 python code/main.py \
   --mode single \
   --csv_path datasets/single_drug.csv \
-  --few_shot_csv_path data/single_fewshot_filled_rounded.csv \
+  --few_shot_csv_path datasets/single_fewshot_filled_rounded.csv \
   --preprocessed_dir cache/cache_single \
   --text_model_name pretrained/bert-base-uncased \
   --epochs 0 \
